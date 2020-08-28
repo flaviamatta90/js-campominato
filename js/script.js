@@ -18,30 +18,37 @@ function generaNumero(random){
   console.log(random);
 
   // funzione che dato un array e un numero mi controlli che il numero non sia gia nell'array
-
+  function inArray(random, numero) {
+      for(i = 0; i <= numero.length; i++) {
+  	if(random == numero[i]) {
+  	    return true;
+  	}
+      }
+      return false;
+  }
 
 // creo variabile array che contiene i numeri bomba
-
+//
 // ciclo che richiama la funzione di generazione numeri per 16 volte
-  // check che il numero non sia duplicato
-  // se non è duplicato, la salvo nell'array
-
+//   check che il numero non sia duplicato
+//   se non è duplicato, la salvo nell'array
+//
 // creo variabile array che contiene i numeri utente
-
+//
 // variabile booleana haPerso = false
-
+//
 // ciclo di 100 - 16volte
-  //prompt in cui chiedo all'utente un numero
-  // check che il numero sia compreso tra 1 e 100
-  // check che il numero non sia duplicato nell'array utente
-  // se non è duplicato, salvo il numero nell'array utente.
-  // chek che il numero non sia nell'array bomba
-  // se il numero è nell'array bomba manderò un alert 'Hai perso!' ed esco al ciclo
-  // alert con array/ utente.legth --> numero di volte che l'utente ha inserito un numero corretto
-  // ha perso = true;
-  // esco dal ciclo
+//   prompt in cui chiedo all'utente un numero
+//   check che il numero sia compreso tra 1 e 100
+//   check che il numero non sia duplicato nell'array utente
+//   se non è duplicato, salvo il numero nell'array utente.
+//   chek che il numero non sia nell'array bomba
+//   se il numero è nell'array bomba manderò un alert 'Hai perso!' ed esco al ciclo
+//   alert con array/ utente.legth --> numero di volte che l'utente ha inserito un numero corretto
+//   ha perso = true;
+//   esco dal ciclo
 // while e break
-
+//
 // check se haPerso = false
 // aler hai vinto
 // alert con array utente.legth --> numero di volte che l'utente ha inserito un numero corretto
