@@ -1,38 +1,59 @@
+var numeroUtente = [];
+var checkNum = [];
+var random = [];
+
+
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
-// I numeri non possono essere duplicati
+// I numeri non possono essere duplicati nell'array
+function generaNum(max, min){
+  var min = 1,
+      max = 100,
+      random;
+  do{
+    random = Math.floor(Math.random()*(max - min) + min);
+  } while ( random == generaNum.last);
+  generaNum.last = random;
+  return random;
+}
+
+for (var i = 1; i <= 16; i++) {
+  console.log(generaNum());
+}
+
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
+var i = 0;
+while (i < 16) {
+  var numeroUtente = parseInt(prompt ("Inserisci un numero da 1 a 100 per 16 volte"));
+  i++;
+}
+
 // L’utente non può inserire più volte lo stesso numero.
+// richiedi numero corretto
+
+
+
+
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
+
+
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
-var bombe = 16;
-var tentativi = 3;
-var random = Math.floor(Math.random() * 100) + 1;
 
 
-// funzione che genera numero casuale tra 1 e 100
-function generaNumero(random){
-  return random;
-}
-  console.log(random);
+// funzione che genera numero casuale tra 1 e 100 V
 
-  // funzione che dato un array e un numero mi controlli che il numero non sia gia nell'array
-  function inArray(random, numero) {
-      for(i = 0; i <= numero.length; i++) {
-  	if(random == numero[i]) {
-  	    return true;
-  	}
-      }
-      return false;
-  }
 
-// creo variabile array che contiene i numeri bomba
-//
+// funzione che dato un array e un numero mi controlli che il numero non sia gia nell'array
+
+
 // ciclo che richiama la funzione di generazione numeri per 16 volte
-//   check che il numero non sia duplicato
-//   se non è duplicato, la salvo nell'array
-//
+
+
+// check che il numero non sia duplicato
+// se non è duplicato, la salvo nell'array
+
+
 // creo variabile array che contiene i numeri utente
 //
 // variabile booleana haPerso = false
